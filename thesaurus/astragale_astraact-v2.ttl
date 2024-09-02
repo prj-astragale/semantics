@@ -1,0 +1,80 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+
+<http://astragale.cnrs.fr/th/astraact>
+        a                               skos:ConceptScheme ;
+        # rdfs:label                      "Astragale Architecture and Components Thesaurus"@en, "Architecture et Composants Thesaurus (Astragale)"@fr ;
+        skos:prefLabel                  "Architecture and Components Thesaurus (Astragale)"@en, "Thésaurus des Architectures et Composants (Astragale)"@fr ;
+        skos:notation                   "astraact" ;
+        dct:description                 "The Astragale Architecture and Components Thesaurus (Astragale ACT) is a controlled vocabulary used for describing architectural and civil engineering works or components. Astragale ACT contains generic terms for categorizing the built structures. It is used within the Astragale Project, and preferentially linked with the popular Art abd Architecture Thesaurus published by the Getty Institute."@en, "Le Thésaurus des Architectures et Composants (Astragale ACT) est un vocabulaire contrôlé utilisé pour décrire les ouvrages ou composants provenant de l'architecture ou du génie civil. Astragale ACT contient des termes génériques pour catégoriser ces éléments bâtis. Il est utilisé dans le cadre du projet Astragale, et est lié de préférence avec le Art and Architecture Thesaurus (AAT) publié par le Getty Institute."@fr ;
+        dct:creator                     "Antoine Gros" ;
+        dct:publisher                   "Astragale" ;
+        dct:created                     "2022-03-22"^^xsd:dateTime ;
+        dct:modified                    "2024-09-02"^^xsd:dateTime ;
+        dct:language                    "fr", "en" ;
+        
+        skos:hasTopConcept              <http://astragale.cnrs.fr/th/astraact/single_built_work>, <http://astragale.cnrs.fr/th/astraact/structural_elements> ;
+        owl:versionInfo                 2 .
+
+
+# Single Built Works
+####################
+<http://astragale.cnrs.fr/th/astraact/single_built_work>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        dct:description  "The Single Built Works hierarchy contains terms for freestanding buildings and other structures commonly considered individual built works or architectural types [...] (Getty AAT)"@en, "La hiérarchie des bâtiments simples  contient des termes pour des bâtiments indépendants et d'autres structures généralement considérées comme des ouvrages individuels ou des types architecturaux (par exemple, « musées », « basiliques », « palais »). Les termes relatifs aux ouvrages bâtis individuels couvrent une gamme allant des bâtiments complexes aux structures annexes minimales (par exemple, les « maisons d'appartements », les « étables », les « tonnelles »). Sont également incluses les constructions dépourvuent pas d'enceinte ou d'abri (par exemple, les « tours de signalisation »). Certaines structures peuvent être relativement petites et exister en tant qu'annexes à d'autres ouvrages construits (par exemple, « fontaines », « tombes »). Relation avec d'autres hiérarchies : Certains termes situés dans la hiérarchie des ouvrages bâtis (par exemple, « écoles (bâtiments) », « bibliothèques (bâtiments) ») ont une institution homologue à laquelle ils sont liés par des relations associatives (par exemple, « écoles (institutions) »). Les termes relatifs aux systèmes structurels et aux éléments de construction individuels (par exemple, « cadres de ballons », « portes de garage ») se trouvent dans la hiérarchie des composants. Les pièces, les espaces et les autres grandes subdivisions du bâtiment (par exemple, « cuisines », « puits ») se trouvent également dans la hiérarchie des composants."@fr ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/astraact> ;
+        skos:narrower    <http://astragale.cnrs.fr/th/astraact/cathedral> ;
+        skos:exactMatch "http://vocab.getty.edu/page/aat/300004789" .
+
+<http://astragale.cnrs.fr/th/astraact/cathedral>
+        a  skos:Concept ;
+        # rdfs:label       "cathedral"@en, "cathédrale"@fr ;
+        skos:prefLabel   "cathedral"@en, "cathédrale"@fr ;
+        dct:description  "Churches that are the principal church of a diocese, serving as the seat of the bishop, or of the archbishop, primate, patriarch, or pope of the diocese. They are generally grandiose structures and house the 'cathedra', which is the throne of the bishop. (Getty AAT)"@en, "Église principale d'un diocèse, où se trouve le siège de l'évêque. (CNRTL)"@fr ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/astraact> ;
+        skos:broader     <http://astragale.cnrs.fr/th/astraact/single_built_work> ;
+        skos:exactMatch "http://vocab.getty.edu/page/aat/300007501" .
+
+
+# Structural Elements
+#####################
+<http://astragale.cnrs.fr/th/astraact/structural_elements>
+    a  skos:Concept ;
+    # rdfs:label       "Single built Work"@en ;
+    skos:prefLabel   "structural elements"@en, "éléments structurels"@fr ;
+    dct:description  "Architectural elements that are part of the structure of a building, as opposed to elements that are decorative. (Getty AAT)"@en, "Elements architecturaux faisant partie de la structure de l'ouvrage, en opposition aux éléments décoratifs. "@fr ;
+    skos:inScheme    <http://astragale.cnrs.fr/th/astraact> ;
+    skos:exactMatch "http://vocab.getty.edu/page/aat/300078048" .
+
+<http://astragale.cnrs.fr/th/astraact/barrel_vaults>
+        a  skos:Concept ;
+        # rdfs:label       "cathedral"@en, "cathédrale"@fr ;
+        skos:prefLabel   "sexpartite vaults"@en, "voûtes sexpartites"@fr ;
+        dct:description  "Vaults of plain, semicircular cross section supported by parallel walls or arcades. (Getty AAT)"@en, "Voûtes simples de section semicirculaire ."@fr ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/astraact> ;
+        skos:broader     <http://astragale.cnrs.fr/th/astraact/structural_elements> ;
+        skos:exactMatch "http://vocab.getty.edu/page/aat/300001363" .
+
+<http://astragale.cnrs.fr/th/astraact/sexpartite_vaults>
+        a  skos:Concept ;
+        # rdfs:label       "cathedral"@en, "cathédrale"@fr ;
+        skos:prefLabel   "sexpartite vaults"@en, "voûtes sexpartites"@fr ;
+        dct:description  "Vaults divided into six vaulting cells. (Getty AAT)"@en, "Voûtes partitionnées en six panneaux de voûtains."@fr ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/astraact> ;
+        skos:broader     <http://astragale.cnrs.fr/th/astraact/structural_elements> ;
+        skos:exactMatch "http://vocab.getty.edu/page/aat/300001335" .
+
+<http://astragale.cnrs.fr/th/astraact/flying_buttresses>
+        a  skos:Concept ;
+        # rdfs:label       "cathedral"@en, "cathédrale"@fr ;
+        skos:prefLabel   "flying buttresses"@en, "arc-boutant"@fr ;
+        dct:description  "Exterior arched supports transmitting the thrust of a vault or roof from the upper part of a wall outward to a pier or buttress. (Getty AAT)"@en, "Contrebutement extérieurs en arcs, qui transmettent la poussée de la voûte ou du toit depuis la partie haute du mur qu'il épaule jusqu'à un pilier ou un contrefort."@fr ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/astraact> ;
+        skos:broader     <http://astragale.cnrs.fr/th/astraact/structural_elements> ;
+        skos:exactMatch "http://vocab.getty.edu/page/aat/300000905" .

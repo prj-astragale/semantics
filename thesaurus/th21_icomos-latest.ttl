@@ -1,0 +1,941 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://frollo.notre-dame.science/opentheso/th21>
+  a skos:ConceptScheme ;
+  skos:prefLabel "Illustrated glossary on stone deterioration patterns (ICOMOS-ISCS)"@en, "Glossaire illustré sur les formes d'altération de la pierre (ICOMOS-ISCS)"@fr ;
+  skos:hasTopConcept 
+  <https://frollo.notre-dame.science/opentheso/th21/crack_and_deformation>,
+  <https://frollo.notre-dame.science/opentheso/th21/detachment>, 
+  <https://frollo.notre-dame.science/opentheso/th21/features_material_loss>, 
+  <https://frollo.notre-dame.science/opentheso/th21/discoloration_and_deposit>, 
+  <https://frollo.notre-dame.science/opentheso/th21/biological_colonization>, 
+  <https://frollo.notre-dame.science/opentheso/th21/alteration>,
+  <https://frollo.notre-dame.science/opentheso/th21/damage>,
+  <https://frollo.notre-dame.science/opentheso/th21/decay>,
+  <https://frollo.notre-dame.science/opentheso/th21/degradation>,
+  <https://frollo.notre-dame.science/opentheso/th21/depreciation>,
+  <https://frollo.notre-dame.science/opentheso/th21/weathering> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:creator "T. Anson Cartwright, E. Bourguignon, P.Bromblet, JA. Cassar, A. Elena Charola, E. De Witte, J. Delgado-Rodrigues, V. Fassina, B. Fitzner, L. Fortier, C. Franzen, JM. Garcia de Miguel, E. Hyslop, M. Klingspor-Rotstein, D. Kwiatkowski, WE. Krumbein, RA. Lefèvre, I. Maxwell, A. McMillan, D. Michoinova, T. Nishiura, K. Normandin, A. Queisser, I. Pallot-Frossard, V. Poshyanandana,  GW. Scherer, S. Simon, R. Snethlage, F. Tourneur, JM.Vallet, RV. Hees, M.Varti-Matarangas, V. Vergès-Belmin, T. Warscheid, K. Winterhalter, D. Young." ;
+  dc:contributors "A.Gros, travail préparatoire I.Cao" ;
+  dc:publisher "ICOMOS International Scientific Committee for Stone (ISCS)." ;
+  dc:title "Glossaire illustré sur les formes d'altération de la pierre (ICOMOS-ISCS)" ;
+  dc:description "" ;
+  dc:language "fr" ;
+  owl:versionInfo "[12] Fin ajout véritables auteurs. I.Cao est désormais contributrice pour la transcription SKOS, ajout d'A.Gros pour ses contributions sur (v11-12) [11] Contenu de la mise à jour 11 : (a) ajout d'un owl:versionInfo depuis la version CAO considérée comme version 10 ; (b) ajout d'une description du thésaurus ; (c) mention des contributeurs initiaux au thésaurus; (d) travail sur les redondances dans la structuration du thésaurus, utilisation de plusieurs outillages réexpliquant la structure du thésaurus au lieu de l'étendre à des lectures transversales, notamment ; (d1) suppression des skos:Collection, redondants avec les skos:topConcept et la hiérarchie skos ; (d2) suppression des microthesaurus, redondants avec les skos:topConcept et la hiérarchie skos ; (e) nettoyage des préfixes ; (f) retravail complet des URIS, cassés et incohérents dans la version précédente ; (g) travail sur les descriptions, notamment ; (g1) suppression des redondances skos:identifier et skos:description ; (g2) suppression des divers bugs dans les skos:description (doublons, troncatures, erreurs sur la langue indiquée) ; (g3) ajout de quelques descriptions manquantes, mais pas toutes non plus ; (h) suppression du skos:Concept 'Termes généraux' car sens ambigu au niveau skos, redondance avec la déclaration des classes skos ainsi ; (h1) déplacement des sous-concepts de 'Termes généraux' à la racine du thésaurus (voir p7 du document original), ces termes sont des termes transversaux, leur utilisation est mobilisée de manière intermittente sur chacun des appartenant aux 5 grandes parties du glossaire ; (i) changement des caractères peu courants de l'UTF-8 en caractères courants (notamment les apostrophes et l'esperluette) ; (j) résolution de gros problèmes sur la structure skos, expliquables par le brouillards ; (k) résolution de bugs sur les skos:Definition, il en reste certainement, certaines skos:Definition sont incomplètes, ceci est dû soit à une erreur d'entrée, soit à un bug à l'export d'un thésaurus sur opentheso, la deuxième alternative est favorisée ; (z) d'un point de vue conceptuel, il y a un risque à traduire a posteriori un glossaire en thésaurus, le paragraphe (h) est un cas d'école." ; 
+  owl:versionInfo "[TODO [13]] (a) vérifier la consistance des skos:definition ; (b) vérifier la cohérence des majuscules dans les labels." ;
+  owl:versionInfo 12 .
+
+###########################
+# TOP
+###########################
+
+
+# NESTED-CONCEPTS
+# Cracks/Detachment/MaterialLoss/Discoloration/Biological
+#########################################################
+
+<https://frollo.notre-dame.science/opentheso/th21/crack_and_deformation>
+  a skos:Concept ;
+  skos:prefLabel "Crack and Deformation"@en, "Fissure and Déformation"@fr ;
+  skos:topConceptOf <https://frollo.notre-dame.science/opentheso/th21> ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32507>, <https://frollo.notre-dame.science/opentheso/th21/32565> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date .
+
+<https://frollo.notre-dame.science/opentheso/th21/detachment>
+  a skos:Concept ;
+  skos:prefLabel "Détachement"@fr, "Detachment"@en ;
+  skos:topConceptOf <https://frollo.notre-dame.science/opentheso/th21> ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32488>, <https://frollo.notre-dame.science/opentheso/th21/32493>, <https://frollo.notre-dame.science/opentheso/th21/32494>, <https://frollo.notre-dame.science/opentheso/th21/32508>, <https://frollo.notre-dame.science/opentheso/th21/32509>, <https://frollo.notre-dame.science/opentheso/th21/32511>, <https://frollo.notre-dame.science/opentheso/th21/32516> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2020-10-15"^^xsd:date .
+
+<https://frollo.notre-dame.science/opentheso/th21/features_material_loss>
+  a skos:Concept ;
+  skos:prefLabel "Features Induced by Material Loss"@en, "Figures Induites par une Perte de Matière"@fr ;
+  skos:topConceptOf <https://frollo.notre-dame.science/opentheso/th21> ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32495>, <https://frollo.notre-dame.science/opentheso/th21/32538>, <https://frollo.notre-dame.science/opentheso/th21/32543>, <https://frollo.notre-dame.science/opentheso/th21/32549>, <https://frollo.notre-dame.science/opentheso/th21/32550>, <https://frollo.notre-dame.science/opentheso/th21/32552>, <https://frollo.notre-dame.science/opentheso/th21/32553> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2020-10-15"^^xsd:date .
+
+<https://frollo.notre-dame.science/opentheso/th21/discoloration_and_deposit>
+  a skos:Concept ;
+  skos:prefLabel "Altération Chromatique et Dépôt"@fr, "Discoloration and Deposit"@en ;
+  skos:topConceptOf <https://frollo.notre-dame.science/opentheso/th21> ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32485>, <https://frollo.notre-dame.science/opentheso/th21/32519>, <https://frollo.notre-dame.science/opentheso/th21/32522>, <https://frollo.notre-dame.science/opentheso/th21/32526>, <https://frollo.notre-dame.science/opentheso/th21/32527>, <https://frollo.notre-dame.science/opentheso/th21/32529>, <https://frollo.notre-dame.science/opentheso/th21/32530>, <https://frollo.notre-dame.science/opentheso/th21/32531>, <https://frollo.notre-dame.science/opentheso/th21/32532>, <https://frollo.notre-dame.science/opentheso/th21/32534>, <https://frollo.notre-dame.science/opentheso/th21/32535> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2020-10-15"^^xsd:date .
+
+<https://frollo.notre-dame.science/opentheso/th21/biological_colonization>
+  a skos:Concept ;
+  skos:prefLabel "Biological Colonization"@en, "Colonisation Biologique"@fr ;
+  skos:topConceptOf <https://frollo.notre-dame.science/opentheso/th21> ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32497>, <https://frollo.notre-dame.science/opentheso/th21/32554>, <https://frollo.notre-dame.science/opentheso/th21/32560>, <https://frollo.notre-dame.science/opentheso/th21/32561>, <https://frollo.notre-dame.science/opentheso/th21/32562>, <https://frollo.notre-dame.science/opentheso/th21/32563> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date .
+
+# FLAT-CONCEPTS (General Terms as root)
+# Alteration/Damage/Decay/Degradation/Deterioration/Weathering
+##############################################################
+
+<https://frollo.notre-dame.science/opentheso/th21/alteration>
+  a skos:Concept ;
+  skos:prefLabel "Alteration"@en, "Altération"@fr ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  skos:topConceptOf <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  skos:definition "Modification of the material that does not necessary imply a worsening of its characteristics from the point of view of conservation. For instance, a reversible coating applied on a stone may be considered as an alteration."@en, "Modification of the material t"@en, "Modification du matériau n'impliquant pas nécessairement une dégradation de ses caractéristiques du point de vue de sa conservation. Par exemple, un revêtement réversible appliqué sur une pierre peut être considéré comme une altération."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/damage>
+  a skos:Concept ;
+  skos:prefLabel "Damage"@en ;
+  skos:related <https://frollo.notre-dame.science/opentheso/th21/degradation> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  skos:topConceptOf <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  skos:definition "Human perception of the loss of value due to decay."@en ;
+  skos:scopeNote "Pas d'équivalent proposé en Français. Voir DÉGRADATION."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/decay>
+  a skos:Concept ;
+  skos:prefLabel "Decay"@en ;
+  skos:related <https://frollo.notre-dame.science/opentheso/th21/degradation> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  skos:topConceptOf <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  skos:definition "Any chemical or physical modification of the intrinsic stone properties leading to a loss of value or to the impairment of use"@en ;
+  skos:scopeNote "Pas d'équivalent proposé en Français. Voir DÉGRADATION."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/degradation>
+  a skos:Concept ;
+  skos:prefLabel "Degradation"@en, "Dégradation"@fr ;
+  skos:related <https://frollo.notre-dame.science/opentheso/th21/32487>, <https://frollo.notre-dame.science/opentheso/th21/damage>, <https://frollo.notre-dame.science/opentheso/th21/depreciation> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  skos:topConceptOf <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  skos:definition "Decline in condition, quality, or functional capacity."@en, "Toute modification chimique ou physique des propriétés intrinsèques de la pierre, conduisant à une perte de valeur, de qualité ou à une entrave à son utilisation."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/depreciation>
+  a skos:Concept ;
+  skos:prefLabel "Deterioration"@en ;
+  skos:altLabel "depreciation"@en ;
+  skos:related <https://frollo.notre-dame.science/opentheso/th21/degradation> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  skos:topConceptOf <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  skos:definition "Process of making or becoming worse or lower in quality, value, character, etc.."@en ;
+  skos:scopeNote "Pas d'équivalent proposé en Français. Voir DÉGRADATION."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/weathering>
+  a skos:Concept ;
+  skos:prefLabel "Altération météorique"@fr, "Weathering"@en ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  skos:topConceptOf <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  skos:definition "Any chemical or mechanical process by which stones exposed to the weather undergo changes in character and deteriorate."@en, "Modification des propriétés physicochimiques de la pierre par les agents atmosphériques naturels."@fr .
+
+# Concepts
+##############################################################
+
+<https://frollo.notre-dame.science/opentheso/th21/32565>
+  a skos:Concept ;
+  skos:prefLabel "Crack"@en, "Fissure"@fr ;
+  skos:altLabel "Craquelure"@fr, "diaclase"@fr, "faille"@fr, "Fault"@en, "fêlure"@fr, "fendage"@fr, "fente"@fr, "Fissure"@en, "Joint"@en ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32491>, <https://frollo.notre-dame.science/opentheso/th21/32503>, <https://frollo.notre-dame.science/opentheso/th21/32504>, <https://frollo.notre-dame.science/opentheso/th21/32505>, <https://frollo.notre-dame.science/opentheso/th21/32506> ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/crack_and_deformation> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32565" ;
+  skos:definition "Individual fissure, clearly visible by the naked eye, resulting from separation of one part from another."@en, "Une fissure est un plan de rupture vu en coupe qui résulte de la séparation d'une pierre en deux parties."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32504>
+  a skos:Concept ;
+  skos:prefLabel "Fracture"@en, "Fracture"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32565> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32504" ;
+  skos:definition "Crack that crosses completely the stone piece"@en, "Fissure traversant complètement une pierre."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32491>
+  a skos:Concept ;
+  skos:prefLabel "Fissuration en étoile"@fr, "Star crack"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32565> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32491" ;
+  skos:definition "Crack having the form of a star. Rusting iron or mechanical impact are possible causes of this type of damage."@en, "Ensemble de fissures se développant de façon rayonnante. La corrosion d'éléments métalliques, l'impact de projectiles sont des causes possibles de fissuration en étoile."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32511>
+  a skos:Concept ;
+  skos:prefLabel "Désagrégation"@fr, "Disintegration"@en ;
+  skos:altLabel "decohesion"@en, "Décohésion"@fr, "disaggregation"@en, "friability"@en, "incoherence"@en, "intergranular incoherence"@en, "Loss of cohesion"@en, "perte de cohésion"@fr, "pulvérisation"@fr, "pulverization"@en ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32489>, <https://frollo.notre-dame.science/opentheso/th21/32512> ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/detachment> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32511" ;
+  skos:definition "Détachement de grains individuels ou d'agrégats de grains. Les particules du matériau ne sont plus liées."@fr, "It affects only the surface of the stone or can occur in depth. Damage generally starts from the surface of the material. On crystalline marble, granular disintegration may reach several centimeters in depth, sometimes more."@en,  .
+
+<https://frollo.notre-dame.science/opentheso/th21/32544>
+  a skos:Concept ;
+  skos:prefLabel "Abrasion"@en, "Abrasion"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32543> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32544" ;
+  skos:definition "Erosion due to wearing down or rubbing away by means of friction, or to the impact of particles."@en, "Érosion due à un frottement (attrition) ou à l'impact de particules."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/discoloration_and_deposit>
+  a skos:Concept ;
+  skos:prefLabel "General terms"@en, "Termes généraux"@fr ;
+  skos:topConceptOf <https://frollo.notre-dame.science/opentheso/th21> ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32487>, <https://frollo.notre-dame.science/opentheso/th21/damage>, <https://frollo.notre-dame.science/opentheso/th21/alteration>, <https://frollo.notre-dame.science/opentheso/th21/degradation>, <https://frollo.notre-dame.science/opentheso/th21/depreciation>, <https://frollo.notre-dame.science/opentheso/th21/weathering> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32518" .
+
+<https://frollo.notre-dame.science/opentheso/th21/32560>
+  a skos:Concept ;
+  skos:prefLabel "Alga"@en, "Algue"@fr ;
+  skos:altLabel "algae"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/biological_colonization> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32560" ;
+  skos:definition "Algae are microscopic vegetal organisms without stem nor leaves which can be seen outdoors and indoors, as powdery or viscous deposits (thickness : tenth of mm to several mm). Algae form green, red, brown, or black veil like zones and can be found mainly"@en, "Les algues sont des organismes végétaux microscopiques sans tige ni feuille formant à l'intérieur comme à l'extérieur des édifices des voiles verts, noirs ou rouges ou bruns (épaisseur quelques dixièmes de mm à plusieurs mm). Selon les conditions environnementales et le substrat les algues peuvent former des films pulvérulents ou visqueux. Les algues se développent principalement dans les situations où la surface du substrat reste humide pendant de longues périodes. Sur les monuments, les algues sont constituées de rassemblements uni ou multicellulaires, elles ne forment jamais de macro-organismes."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32485>
+  a skos:Concept ;
+  skos:prefLabel "Altération Chromatique"@fr, "Discolouration"@en ;
+  skos:altLabel "Chromatic alteration"@en, "Discoloration"@en ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32486>, <https://frollo.notre-dame.science/opentheso/th21/32523>, <https://frollo.notre-dame.science/opentheso/th21/32524>, <https://frollo.notre-dame.science/opentheso/th21/32525> ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/discoloration_and_deposit> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32485" ;
+  skos:definition "Change of the stone colour in one to three of the colour parameters : hue, value and chroma. Hue corresponds to the most prominent characteristic of a colour (blue, red, yellow, orange etc..).Value corresponds to the darkness (low hues) or lightness (high"@en, "Modification d'un ou plusieurs des paramètres caractérisant la couleur de la pierre : teinte, clarté, saturation. Teinte : correspond à la caractéristique la plus marquante de la couleur (bleu, rouge, jaune, orange etc.). Clarté : correspond au caractère foncé (clarté faible), ou clair (forte clarté) de la couleur. Saturation : correspond à la pureté d'une couleur. Les couleurs à saturation élevée paraissent vives et pleines. Les couleurs à saturation faible paraissent grisâtres et ternes."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32495>
+  a skos:Concept ;
+  skos:prefLabel "Alvéolisation"@fr, "Alveolization"@en ;
+  skos:altLabel "Alveolar erosion"@en, "alveolar weathering"@en, "alvéole"@fr, "Alveolisation"@en, "honeycomb"@en ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32537> ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/features_material_loss> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32495" ;
+  skos:definition "Formation, on the stone surface, of cavities (alveoles) which may be interconnected and may have variable shapes and sizes (generally centimetric, sometimes metric)."@en, "Formation, à la surface de la pierre, de cavités (alvéoles) variables en forme et taille (souvent centimétrique, parfois métrique), et qui peuvent être interconnectées."@fr ;
+  skos:scopeNote "Not to be confused with Microkarst which refers to a network of millimetric to centrimetric interconnected depressions, clearly linked to a dissolution process. or Pitting, which corresponds to the formation of point-like millimetric to submillimetric pit"@en .
+
+<https://frollo.notre-dame.science/opentheso/th21/32530>
+  a skos:Concept ;
+  skos:prefLabel "Aspect Luisant"@fr, "Glossy Aspect"@en ;
+  skos:altLabel "Polished surface"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/discoloration_and_deposit> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32530" ;
+  skos:definition "Aspect of a surface that reflects totally or partially the light. The surface has a mirror-like appearance."@en, "Aspect de surface qui reflète totalement ou partiellement la lumière. La surface ressemble à un miroir."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32496>
+  a skos:Concept ;
+  skos:prefLabel "Érosion en boule"@fr, "Rounding"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32538> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32496" ;
+  skos:definition "Preferential erosion of originally angular stone edges leading to a distinctly rounded profile. Rounding can especially be observed on stones which preferably deteriorate through granular disintegration, or when environmental conditions favor granular dis"@en, "Forme arrondie résultant de l'érosion préférentielle des bords originellement anguleux d'une pierre. On observe cette forme d'altération sur les pierres sujettes à la désagrégation granulaire, ou placées dans des conditions telles que la désagrégation granulaire peut se développer."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32486>
+  a skos:Concept ;
+  skos:prefLabel "Assombrissement dû à l'humidité"@fr, "Moist area"@en ;
+  skos:altLabel "moist spot"@en, "moist zone or visible damp area"@en, "tache d'humidité"@fr, "zone humide visible"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32485> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32486" ;
+  skos:definition "Corresponds to the darkening (lower hue) of a surface due to dampness"@en, "Un assombrissement du à l'humidité (préféré à tache d'humidité et à zone humide visible), est considérée comme une altération chromatique (baisse de saturation)."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32542>
+  a skos:Concept ;
+  skos:prefLabel "Augmentation de rugosité"@fr, "Roughening"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32538> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32542" ;
+  skos:definition "Selective loss of small particles from an originally smooth stone surface. The substrate is still sound. Roughening can appear either progressively in case of long term deterioration process (for instance in case of granular disintegration), or instantane"@en, "Correspond à un accroissement de rugosité d'une surface originellement douce, par perte sélective de petites particules sur un substrat encore sain. Dans le cas d'une pierre originellement polie, on parle dépolissage. Une augmentation de rugosité peut être progressive car due à une exposition continue aux agents de détérioration, (exemple : désagrégation granulaire) ou immédiate, comme lors d'un nettoyage agressif."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32493>
+  a skos:Concept ;
+  skos:prefLabel "Peeling"@en, "Pelage"@fr ;
+  skos:altLabel "Écaillage"@fr, "Peeling off"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/detachment> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32493" ;
+  skos:definition "Shedding, coming off, or partial detachment of a superficial layer (thickness : submillimetric to millimetric) having the aspect of a film or coating which has been applied on the stone surface."@en, "Décollement partiel ou total d'une fine couche (épaisseur inframillimétrique à millimétrique) ayant l'aspect d'un film ou d'un revêtement appliqué sur la pierre."@fr ;
+  skos:scopeNote "Not to be confused with Blistering, which is associated with a dome-like morphology and Scaling, which is related to the detachment of stone layers (thickness : millimetric to centimetric)."@en, "Not to be confused with Blistering, which is associated with a d"@en .
+
+<https://frollo.notre-dame.science/opentheso/th21/32547>
+  a skos:Concept ;
+  skos:prefLabel "Bûchage"@fr, "Keying"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32543> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32547" ;
+  skos:definition "Impact damage resulting from hitting a surface with a pointed tool, in order to get an irregular surface which will assist the adhesion of an added material, a mortar for instance."@en, 
+  "Ensemble d'entailles réalisées par un outil de taille. Ces entailles ont pour but de rendre la surface irrégulière de façon à favoriser l'accrochage mécanique d'un matériau rajouté, un mortier par exemple. Le bûchage désigne aussi en Français l'élimination, par vandalisme, d'une partie saillante d'une sculpture."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32508>
+  a skos:Concept ;
+  skos:prefLabel "Blistering"@en, "Boursouflure"@fr ;
+  skos:altLabel "Cloque"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/detachment> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32508" ;
+  skos:definition "Separated, air-filled, raised hemispherical elevations on the face of stone resulting from the detachment of an outer stone layer. This detachment is not related to the stone structure"@en, "Détachement d'une couche superficielle de la pierre sous forme d'un bombement creux plus ou moins fissuré, et de forme sub-hémisphérique. Ce détachement est indépendant de la structure interne de la pierre."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32506>
+  a skos:Concept ;
+  skos:prefLabel "Clivage"@fr, "Splitting"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32565> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32506" ;
+  skos:definition "Fracturing of a stone along planes of weakness such as microcracks or clay/silt layers, in case where the structural elements are orientated vertically. For instance, a column may split into several parts along bedding planes if the load above it is too h"@en, "Décrit le développement d'une cassure le long de plans de faiblesse tels que  microfissures, couches argileuses, dans le cas où ces éléments structuraux sont orientés verticalement. Une pierre posée en délit, par exemple une colonne, peut se cliver le long des plans de litage si la charge qu'elle supporte est trop importante."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32554>
+  a skos:Concept ;
+  skos:prefLabel "Biological Colonization"@en, "Colonisation Biologique"@fr ;
+  skos:altLabel "Biological colonisation"@en, "Biological growth"@en, "biological overgrowth"@en, "Croissance biologique"@fr, "living exogenous material"@en, "Prolifération végétale"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/biological_colonization> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32554" ;
+  skos:definition "Colonization of the stone by plants and micro-organisms such as bacteria, cyanobacteria, algae, fungi and lichen (symbioses of the latter three). Biological colonization also includes influences by other organisms such as animals nesting on and in stone.#"@en, "L'expression colonisation biologique s'applique surtout aux plantes et aux microorganismes tels que bactéries, cyanobactéries, algues, moisissures et lichens (symbioses des trois derniers). Il s'applique aussi aux structures fabriquées par des animaux, tels que des nids."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32524>
+  a skos:Concept ;
+  skos:prefLabel "Coloration"@fr, "Colouration"@en ;
+  skos:altLabel "colouring"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32485> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32524" ;
+  skos:definition "Change in hue, value and/or a gain in chroma"@en, "Changement de teinte, de clarté et /ou à un gain en saturation."@en, "Changement de teinte, de clarté et /ou à un gain en saturation."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32537>
+  a skos:Concept ;
+  skos:prefLabel "Coving"@en, "Creusement"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32495> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32537" ;
+  skos:definition "Erosion feature consisting in a single alveole developing from the edge of the stone block."@en, "S'applique à la formation d'une seule alvéole affectant la surface de la pierre à partir de ses arêtes."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32527>
+  a skos:Concept ;
+  skos:prefLabel "Encroûtement"@fr, "Encrustation"@en ;
+  skos:altLabel "Incrustation"@en ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32528> ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/discoloration_and_deposit> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32527" ;
+  skos:definition "Compact, hard, mineral outer layer adhering to the stone. Surface morphology and colour are usually different from those of the stone."@en, "Couche superficielle compacte, dure et adhérente. La morphologie superficielle et la couleur sont habituellement différ"@en, "Couche superficielle compacte, dure et adhérente. La morphologie superficielle et la couleur sont habituellement différentes de celles de la pierre."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32528>
+  a skos:Concept ;
+  skos:prefLabel "Concretion"@en, "Concrétion"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32527> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32528" ;
+  skos:definition "Kind of encrustation having a specific shape: nodular, botryoïdal (grape-like) or framboïdal (raspberry like). Concretions may even have conic shapes of form drapery-like vertical sheets. Stalagmites and stalactites are kinds of concretions. In general, c"@en, "Sorte d'encroûtement en forme de dépôt compact noduleux, botryoïde (comme une grappe) ou framboïde (comme une framboise). Une concrétion peut même avoir des formes coniques ou constituer des feuillets verticaux (draperies). Les stalagmites et stalactites"@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32482>
+  a skos:Concept ;
+  skos:prefLabel "Contour scaling"@en, "Desquamation en plaques"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32494> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32482" ;
+  skos:definition "Desquamation dont l'interface avec la partie saine de la pierre reproduit le modelé de la pierre, parallèlement à sa surface. Dans le cas où cette surface est plane, l'expression Desquamation en plaque (préférée à déplacage ou encore formation de plaques) peut être utilisée."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32494>
+  a skos:Concept ;
+  skos:prefLabel "Desquamation"@fr, "Scaling"@en ;
+  skos:altLabel "plaque"@fr, "plaquette"@fr ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32482>, <https://frollo.notre-dame.science/opentheso/th21/32483> ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/detachment> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32494" ;
+  skos:definition "Detachment of stone as a scale or a stack of scales, not following any stone structure and detaching like fish scales or parallel to the stone surface. The thickness of a scale is generally of millimetric to centimetric scale, and is negligeable compared"@en, "Détachement d'écailles de pierre individuelles ou en paquets indépendamment de toute structure orientée préexistante. La desquamation se développe parallèlement à la surface ou en écailles de poisson. L'épaisseur des écailles est négligeable par rapport à leur extension."@fr ;
+  skos:scopeNote "Not to be confused with Delamination, which corresponds to a detachment following the bedding or shistosity planes of a stone."@en, "Ne pas confondre avec Délitage que correspond à un détachement selon une orientation préexistante, telle que des plans de litag"@en .
+
+<https://frollo.notre-dame.science/opentheso/th21/32503>
+  a skos:Concept ;
+  skos:prefLabel "Craquele"@en, "Craquellement"@fr ;
+  skos:altLabel "crack network"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32565> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32503" ;
+  skos:definition "Network of minor cracks also called crack network. The term crazing is not appropriate for stone, as this term should be used for describing the development of a crack network on glazed terracotta."@en, "Réseau de fissures peu ouvertes. Le terme faïençage  n'est  pas  approprié  pour  la  pierre  : il décrit un réseau de fissures affectant un émail, un enduit."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32519>
+  a skos:Concept ;
+  skos:prefLabel "Croûte"@fr, "Crust"@en ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32520>, <https://frollo.notre-dame.science/opentheso/th21/32521> ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/discoloration_and_deposit> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32519" ;
+  skos:definition "Generally coherent accumulation of materials on the surface. A crust may include exogenic deposits in combination with materials derived from the stone. A crust is frequently dark coloured (black crust) but light colours can also be found. Crusts may have"@en, "Accumulation de matériaux en une ou plusieurs couches superficielles cohérentes. Une croûte peut contenir des dépôts exogènes combinés avec des matériaux dérivés de la pierre. Une croûte est fréquemment de couleur foncée (ex. Croûte noire) mais on rencontre aussi des croûtes de teinte claire. Les croûtes peuvent avoir une épaisseur homogène, auquel cas elles reproduisent fidèlement les contours de la pierre, ou bien avoir une épaisseur irrégulière ce qui perturbe la lecture des détails superficiels."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32520>
+  a skos:Concept ;
+  skos:prefLabel "Black crust"@en, "Croûte noire"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32519> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32520" ;
+  skos:definition "Kind of crust developing generally on areas protected against direct rainfall or water runoff in urban environment. Black crusts usually adhere firmly to the substrate. They are composed mainly of particles from the atmosphere, trapped into a gypsum (CaSO.2H2O)"@en, "Croûte de couleur grise à noire, habituellement fortement adhérente, et qui se développe en milieu urbain, dans des zones protégées de l'impact direct de la pluie ou des ruissellements d'eau. Les croûtes noires sont principalement constituées de particules provenant de l'atmosphère, piégées dans une matrice de gypse (CaSO4.2H2O)."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32521>
+  a skos:Concept ;
+  skos:prefLabel "Croûte saline"@fr, "Salt crust"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32519> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32521" ;
+  skos:definition "Crust composed of soluble salts, which develop in the presence of high salt levels, and form from wetting and drying cycles."@en, "Croûte composée de sels solubles, qui se développe dans un contexte de forte teneur en sel, au gré des cycles d'humectation-dessiccation."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32523>
+  a skos:Concept ;
+  skos:prefLabel "Bleaching"@en, "Décoloration"@fr ;
+  skos:altLabel "fading"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32485> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32523" ;
+  skos:definition "gain in value due to chemical weathering of minerals (e.g. reduction of iron and manganese compounds) or extraction of coloring matter (leaching, washing out), or loss of polish, generally very superficial. Dark and bright color marbles often show bleachi"@en, "Augmentation de clarté, due à l'altération chimique des minéraux (par exemple réduction du fer et du manganèse) ou à l'extraction de matière colorante (par lavage, lessivage), ou par perte de poli, généralement très superficielle. Les marbres foncés et ceux de couleurs vives subissent souvent une décoloration suite à une exposition aux intempéries. Un blanchiment est une sorte de décoloration."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32507>
+  a skos:Concept ;
+  skos:prefLabel "Deformation"@en, "Déformation"@fr ;
+  skos:altLabel "bowing"@en, "Déformation plastique"@fr, "distorsion"@fr, "gauchissement"@fr, "Plastic deformation"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/crack_and_deformation> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32507" ;
+  skos:definition "Change in shape without loosing integrity, leading to bending, buckling or twisting of a stone block."@en, "Changement de forme conduisant à la courbure (convexe ou concave), au bombement ou à la torsion d'une pierre."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32543>
+  a skos:Concept ;
+  skos:prefLabel "Dégât mécanique"@fr, "Mechanical Damage"@en ;
+  skos:altLabel "Arrachement"@fr ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32544>, <https://frollo.notre-dame.science/opentheso/th21/32545>, <https://frollo.notre-dame.science/opentheso/th21/32546>, <https://frollo.notre-dame.science/opentheso/th21/32547>, <https://frollo.notre-dame.science/opentheso/th21/32548> ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/features_material_loss> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32543" ;
+  skos:definition "Loss of stone material clearly due to a mechanical action."@en, "Perte de matière due à une action mécanique."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32509>
+  a skos:Concept ;
+  skos:prefLabel "Delamination"@en, "Délitage"@fr ;
+  skos:altLabel "Délamination"@fr, "délitement"@fr, "Layering"@en ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32510> ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/detachment> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32509" ;
+  skos:definition "Detachment process affecting laminated stones (most of sedimentary rocks, some metamorphic rocks...). It corresponds to a physical separation into one or several layers following the stone laminae. The thickness and the shape of the layers are variable."@en, "Détachement selon une orientation préexistante conduisant à la dissociation d'une ou quelques couches (lamines). Il affecte les pierres présentant un litage (pierres d'origine sédimentaire) ou des plans de schistosité (pierres d'origine métamorphique). L'épaisseur et la forme des couches sont variables."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32522>
+  a skos:Concept ;
+  skos:prefLabel "Deposit"@en, "Dépôt"@fr ;
+  skos:altLabel "dépôt superficiel"@fr, "Dépôt superficiel"@en, "empoussièrement"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/discoloration_and_deposit> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32522" ;
+  skos:definition "Accumulation of exogenic material of variable thickness. Some examples of deposits : splashes of paint or mortar, sea salt aerosols, atmospheric particles such as soot or dust, remains of conservation materials such as cellulose poultices, blast materials"@en, "Accumulation superficielle de matériaux exogènes formant une couche peu cohérente et d'épaisseur variable. Exemples de dépôts : éclaboussures de peinture ou de mortier, sels provenant d'aérosols marins, poussières, restes de matériaux de conservation comme compresses cellulosiques, poudres de sablage etc."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32512>
+  a skos:Concept ;
+  skos:prefLabel "Désagrégation granulaire"@fr, "Granular disintegration"@en ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32513>, <https://frollo.notre-dame.science/opentheso/th21/32514>, <https://frollo.notre-dame.science/opentheso/th21/32515> ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32511> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32512" ;
+  skos:definition "Occurs in granular sedimentary (e.g. sandstone) and granular crystalline (e.g. granite) stones. Granular disintegration produces debris referred to as a rock meal and can often be seen accumulating at the foot of wall actively deteriorating. If the stone"@en, "Se développe sur les roches granulaires (ex. grès) ou à texture grenue (ex. granites). Elle conduit souvent à la formation de dépôts meubles au dessous des zones affectées. Si la surface de la pierre forme une cavité (creusement), les matériaux détachés peuvent s'accumuler par gravité sur la partie inférieure de la cavité. La taille des grains détermine la taille des matériaux détachés."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32514>
+  a skos:Concept ;
+  skos:prefLabel "Désagrégation sableuse"@fr, "Sanding"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32512> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32514" ;
+  skos:definition "Describe granular disintegration of sandstones and granites."@en, "S'applique aux grès et aux granites."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32515>
+  a skos:Concept ;
+  skos:prefLabel "Désagrégation saccharoïde"@fr, "Sugaring"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32512> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32515" ;
+  skos:definition "Granular disintegration employed mainly in the white cristallyne marble domain"@en, "S'applique aux marbres cristallins."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32483>
+  a skos:Concept ;
+  skos:prefLabel "Écaillage"@fr, "Flaking"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32494> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32483" ;
+  skos:definition "Détachement de fragments plats ou incurvés organisés en  écailles de poisson et d'épaisseur submillimétrique à millimétrique."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32488>
+  a skos:Concept ;
+  skos:prefLabel "Bursting"@en, "Éclatement"@fr ;
+  skos:altLabel "Break out"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/detachment> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32488" ;
+  skos:definition "Local loss of the stone surface from internal pressure usually manifesting in the form of an irregularly-sided crater."@en, "Perte locale de matière en surface de la pierre, due à des pressions internes, se manifestant habituellement sous la forme d'un cratère à bords irréguliers"@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32526>
+  a skos:Concept ;
+  skos:prefLabel "Efflorescence"@en, "Efflorescence"@fr ;
+  skos:altLabel "Efflorescence saline"@fr, "loose salt deposits"@en, "salpêtre"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/discoloration_and_deposit> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32526" ;
+  skos:definition "Generally whitish, powdery or whisker-like crystals on the surface. Efflorescences are generally poorly cohesive and commonly made of soluble salt crystals."@en,  "Amas de cristaux habituellement blancs, d'aspect poudreux, aciculaire (en forme d'aiguilles) ou filamenteux, localisés en surface de la pierre. En général, les efflorescences sont peu cohérentes et constituées de sels solubles."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32489>
+  a skos:Concept ;
+  skos:prefLabel "Crumbling"@en, "Émiettement"@fr ;
+  skos:altLabel "effritement"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32511> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32489" ;
+  skos:definition "Detachment of aggregates of grains from the substrate. These aggregates are generally limited in size (less than 2 cm). This size depends of the nature of the stone and its environment."@en, "Détachement  d'agrégats de grains de pierre. Ces agrégats ont une taille généralement inférieure à 2 cm, liée à la nature et à l'environnement de la pierre."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32534>
+  a skos:Concept ;
+  skos:prefLabel "Encrassement"@fr, "Soiling"@en ;
+  skos:altLabel "Salissure"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/discoloration_and_deposit> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32534" ;
+  skos:definition "Deposit of a very thin layer of exogenous particles (eg. soot) giving a dirty appearance to the stone surface."@en, "Dépôt très fin de particules exogènes (par ex. poussières, suies) donnant un aspect sale à la surface de pierre."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32516>
+  a skos:Concept ;
+  skos:prefLabel "Fragmentation"@en, "Fragmentation"@fr ;
+  skos:altLabel "Cassure"@fr ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32490>, <https://frollo.notre-dame.science/opentheso/th21/32517> ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/detachment> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32516" ;
+  skos:definition "The complete or partial breaking up of a stone, into portions of variable dimensions that are irregular in form, thickness and volume."@en, "Fracturation partielle ou complète de la pierre en fragments de dimensions variables dont la forme, l'épaisseur et le volume sont irréguliers."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32490>
+  a skos:Concept ;
+  skos:prefLabel "Chipping"@en, "Épaufrure"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32516> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32490" ;
+  skos:definition "Breaking off of pieces, called chips, from the edges of a block."@en, "Détachement d'un éclat sur une arête. Le fragment formé (chip en anglais) a une taille variable et une forme irrégulière."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32538>
+  a skos:Concept ;
+  skos:prefLabel "Erosion"@en, "Érosion"@fr ;
+  skos:altLabel "Loss of material"@en ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32496>, <https://frollo.notre-dame.science/opentheso/th21/32539>, <https://frollo.notre-dame.science/opentheso/th21/32542> ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/features_material_loss> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32538" ;
+  skos:definition "Loss of original surface, leading to smoothed shapes."@en, "Disparition de la surface originelle de la pierre, conduisant à des contours émoussés."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32539>
+  a skos:Concept ;
+  skos:prefLabel "Differential erosion"@en, "Érosion différentielle"@fr ;
+  skos:altLabel "Differential deterioration"@en, "Relief formation"@en ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32540>, <https://frollo.notre-dame.science/opentheso/th21/32541> ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32538> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32539" ;
+  skos:definition "occurs when erosion does not proceed at the same rate from one area of the stone to the other. As a result, the stone deteriorates irregularly. This feature is found on heterogeneous stones containing harder and/or less porous zones. It may also occur as"@en, "Une érosion différentielle conduit à la formation de reliefs, par exemple à la création d'irrégularités à la surface de la pierre. Elle apparaît si l'érosion ne progresse pas de façon homogène sur toute la surface de la pierre. On trouve cette figure sur les pierres hétérogènes, contenant des zones plus dures et/ou moins poreuses. Les roches calcitiques peuvent aussi présenter une érosion différentielle résultant d'une attaque sélective par des lichens. Certaines roches sédimentaires et volcaniques sont particulièrement sujettes à ce type d'altération. Deux types de figures résultent du processus d'érosion différentielle : Perte de constituants et Perte de matrice"@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32510>
+  a skos:Concept ;
+  skos:prefLabel "Exfoliation"@en, "Exfoliation"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32509> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32510" ;
+  skos:definition "Detachment of multiple thin stone layers (cm scale) that are sub-parallel to the stone surface. The layers may bend, twist in a similar way as book pages."@en,  "Détachement de multiples couches, subparallèles à la surface de la pierre. Quand les couches détachées sont fines (épaisseur centimétrique), elles peuvent présenter des plis, des torsions, de la même façon que les pages gaufrées d'un livre."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32529>
+  a skos:Concept ;
+  skos:prefLabel "Film"@en, "Film"@fr ;
+  skos:altLabel "peau"@fr, "Pellicle"@en, "Pellicule"@fr, "skin"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/discoloration_and_deposit> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32529" ;
+  skos:definition "Thin covering or coating layer generally of organic nature, generally homogeneous, follows the stone surface. A film may be opaque or translucent"@en, "Recouvrement mince, homogène, d'épaisseur généralement uniforme, habituellement de nature organique, souvent transparent, et qui épouse la surface de la pierre."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32517>
+  a skos:Concept ;
+  skos:prefLabel "Fragmentation en esquilles"@fr, "Splintering"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32516> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32517" ;
+  skos:definition "Detachment of sharp, slender pieces of stone, split or broken off from the main body."@en, "Fracturation en un ou plusieurs fragments de forme allongée aux arêtes vives."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32531>
+  a skos:Concept ;
+  skos:prefLabel "Graffiti"@en, "Graffiti"@fr ;
+  skos:altLabel "Graffitis"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/discoloration_and_deposit> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32531" ;
+  skos:definition "Engraving, scratching, cutting or application of paint, ink or similar matter on the stone surface."@en, "Forme d'altération superficielle résultant d'une incision, rayure ou application de peinture, encre ou matériau assimilé."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32545>
+  a skos:Concept ;
+  skos:prefLabel "Cut"@en, "Incision"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32543> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32545" ;
+  skos:definition "Loss of material due to the action of an edge tool. It can have the appearance of an excavated cavity, an incision, a missing edge, etc...Tool marks can be considered as special kinds of cuts but should not be considered as damage features."@en, "Marque laissée par l'élimination de matière à l'aide d'un instrument coupant. Une incision peut avoir l'apparence d'une cavité excavée, une coupure, un bord manquant, etc. Les marques d'outil peuvent être considérées comme des formes spéciales d'incisions, mais ne devraient pas être considérées comme des formes d'altération. Certains graffitis peuvent être faits par incision de la pierre."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32563>
+  a skos:Concept ;
+  skos:prefLabel "Lichen"@en, "Lichen"@fr ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32499>, <https://frollo.notre-dame.science/opentheso/th21/32500>, <https://frollo.notre-dame.science/opentheso/th21/32501> ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/biological_colonization> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32563" ;
+  skos:definition "Vegetal organism forming rounded millimetric to centimetric crusty or bushy patches, often having a leathery appearence, growing generally on outside parts of a building. Lichen are most commonly grey, yellow, orange, green or black and show no differenti"@en, "Structure végétale millimétrique à centimétrique, généralement arrondie, ayant un aspect encroûtant ou buissonnant, et l'aspect du cuir. De couleur variée (orange, vert, gris, brun ou noir), ils ne montrent pas de différenciation en feuilles, tige et racine. Les lichens se développent généralement sur les surfaces externes de monuments."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32499>
+  a skos:Concept ;
+  skos:prefLabel "Crustose lichen"@en, "Lichen encroûtant"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32563> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32499" ;
+  skos:definition "Les lichens se subdivisent en trois types : encroûtant, foliacé et épilithique. Quand leur thalle se développe principalement dans la pierre, ils sont appelés lichens endolithiques."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32500>
+  a skos:Concept ;
+  skos:prefLabel "Epilithic lichen"@en, "Lichen épilithique"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32563> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32500" ;
+  skos:definition "Les lichens se subdivisent en trois types : encroûtant, foliacé et épilithique. Quand leur thalle se développe principalement dans la pierre, ils sont appelés lichens endolithiques."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32501>
+  a skos:Concept ;
+  skos:prefLabel "Folious lichen"@en, "Lichen foliacé"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32563> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32501" ;
+  skos:definition "Les lichens se subdivisent en trois types : encroûtant, foliacé et épilithique. Quand leur thalle se développe principalement dans la pierre, ils sont appelés lichens endolithiques."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32505>
+  a skos:Concept ;
+  skos:prefLabel "Hair crack"@en, "Microfissure"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32565> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32505" ;
+  skos:definition "Minor crack with width dimension < 0.1 mm"@en, "Fissure d'ouverture inférieure à 0,1 mm."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32549>
+  a skos:Concept ;
+  skos:prefLabel "Microkarst"@en, "Microkarst"@fr ;
+  skos:altLabel "cratering"@en, "dissolution"@en, "Karst"@en, "Karst"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/features_material_loss> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32549" ;
+  skos:definition "Network of small interconnected depressions of millimetric to centrimetric scale, sometimes looking like hydrographic network. Microkarst patterns are due to a partial and/or selective dissolution of calcareous stone surfaces exposed to water run-off."@en, "Réseau de petites dépressions interconnectées, d'échelle millimétrique à centimétrique, ayant parfois l'aspect d'un réseau hydrographique. Généralement, les figures de microkarst sont dues à une dissolution partielle ou sélective de la surface des pierres calcaires exposées au ruissellement d'eau."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32561>
+  a skos:Concept ;
+  skos:prefLabel "Moisissure"@fr, "Mould"@en ;
+  skos:altLabel "Fungi"@en, "Mold"@en ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/biological_colonization> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32561" ;
+  skos:definition "Microscopic fungus which colonies, to the naked eye, look like a downy film or a network or star-like millimetric patches of filaments of diverse colours (white, grey, black)."@en, "Une moisissure est un champignon microscopique. La croissance d'une moisissure peut atteindre des dimensions visibles à l'oeil nu sous la forme d'une pellicule duveteuse de diverses couleurs (blanc, gris, noir surtout) ou de filaments croissant depuis un centre (de façon centripète) et formant ainsi un réseau de structures en étoiles, ayant un diamètre de 2 à 10 mm."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32497>
+  a skos:Concept ;
+  skos:prefLabel "Moss"@en, "Mousse"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/biological_colonization> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32497" ;
+  skos:definition "Vegetal organism forming small, soft and green cushions of centimetric size. Mosses look generally like dense micro-leaves (subto millimetric size) tightly packed together. Mosses often grow on stone surface open cavities, cracks, and in any place permane"@en, "Organisme végétal en forme de coussinets verts souples au toucher, de taille centimétrique. Les mousses ont l'apparence de petites feuilles (taille submillimétrique à millimétrique) assemblées en bouquets serrés. Les mousses se développent dans des cavités ouvertes, des fissures, des joints, toutes zones constamment ou souvent humides et/ou ombragées."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32550>
+  a skos:Concept ;
+  skos:prefLabel "Missing Part"@en, "Partie Manquante"@fr ;
+  skos:altLabel "Lacuna"@en, "lacune"@fr, "Manque"@fr ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32551> ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/features_material_loss> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32550" ;
+  skos:definition "Empty space, obviously located in the place of some formerly existing stone part. Protruding and particularly exposed parts of sculptures (nose, fingers..) are typical locations for material loss resulting in missing parts."@en, "Absence de tout ou partie d'une pierre. Cette figure d'altération affecte fréquemment les éléments proéminents et particulièrement exposés des sculptures (nez, orteils, doigts)."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32532>
+  a skos:Concept ;
+  skos:prefLabel "Patina"@en, "Patine"@fr ;
+  skos:narrower <https://frollo.notre-dame.science/opentheso/th21/32533>, <https://frollo.notre-dame.science/opentheso/th21/32559> ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/discoloration_and_deposit> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32532" ;
+  skos:definition "Chromatic modification of the material, generally resulting from natural or artificial ageing and not involving in most cases visible surface deterioration."@en, "Modification chromatique superficielle, résultant d'une altération naturelle ou artificielle et n`impliquant généralement pas de dégradation superficielle visible."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32533>
+  a skos:Concept ;
+  skos:prefLabel "Oxalate patina"@en, "Patine d'oxalates"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32532> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32533" ;
+  skos:definition "Orange to brown thin layer enriched in calcium oxalates. This kind of patina may be found in outdoors environment, often on marble and limestone substrates."@en, "Ces patines, orange à brunes, sont de fines couches enrichies en oxalates de calcium. Elles se forment sur différents substrats, le plus souvent sur calcaires et marbres, en milieu extérieur."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32559>
+  a skos:Concept ;
+  skos:prefLabel "Iron rich patina"@en, "Patine ferrugineuse"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32532> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32559" ;
+  skos:definition "Natural black to brown thin layer enriched in iron/clay minerals, which can be found on iron containing sandstones. This kind of patina is generally observed in outdoors environment, and develops quite uniformly on the stone surface."@en, "Type de patine brune à noire, se formant naturellement sur les grès contenant du fer. Elles se développent assez uniformément sur la surface de la pierre, dans les zones exposées aux intempéries."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32552>
+  a skos:Concept ;
+  skos:prefLabel "Perforation"@en, "Perforation"@fr ;
+  skos:altLabel "Drill hole"@en, "Percement"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/features_material_loss> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32552" ;
+  skos:definition "A single or series of surface punctures, holes or gaps, made by a sharp tool or created by an animal. The size is generally of millimetric to centrimetric scale. Perforations are deeper than wide, and penetrate into the body of the stone"@en, "Poinçonnement, percement, simple ou multiple, de taille milli- à centimétrique, induit par un animal ou un outil, qui s'étend en profondeur. Une perforation est plus profonde que large."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32553>
+  a skos:Concept ;
+  skos:prefLabel "Pitting"@en, "Pitting"@fr ;
+  skos:altLabel "Piqûre"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/features_material_loss> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32553" ;
+  skos:definition "Point-like millimetric or submillimetric shallow cavities. The pits generally have a cylindrical or conical shape and are not interconnected, although transitions patterns to interconnected pits can also be observed."@en, "Cavité millimétrique ou submillimétrique peu profonde. Les piqûres ont généralement une forme conique ou cylindrique et ne sont pas connectées. On peut observer cependant des formes de transition vers un système de piqûres interconnectées."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32562>
+  a skos:Concept ;
+  skos:prefLabel "Plant"@en, "Plante"@fr ;
+  skos:altLabel "Higher plant"@en, "vegetation"@en, "Végétation"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/biological_colonization> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32562" ;
+  skos:definition "Vegetal living being, having, when complete, root, stem, and leaves, though consisting sometimes only of a single leafy expansion (e.g. Tree, fern, herb)."@en, "Être vivant végétal organisé différencié en racine(s), tige(s) et feuilles. Parfois cependant, la plante peut ne se résumer qu'à une simple expansion foliaire (ex : Fougère, arbre, arbuste, herbe)."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32541>
+  a skos:Concept ;
+  skos:prefLabel "Loss of matrix"@en, "Perte de matrice"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32539> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32541" ;
+  skos:definition "Partial or selective elimination of the stone matrix, resulting in protruding compact stone components."@en, "Processus inverse correspondant à une élimination sélective de la matrice de la pierre, avec pour conséquence la mise en relief de constituants compacts de la pierre (ex. : galets, fossiles, fragments de lave)."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32540>
+  a skos:Concept ;
+  skos:prefLabel "Loss of components"@en, "Perte de constituants"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32539> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32540" ;
+  skos:definition "Correspond à l'élimination sélective de constituants plus tendres ou plus compacts."@en, "Correspond à l'élimination sélective de constituants plus tendres (ex. : lentilles d'argile, nodules de limonite) ou plus compacts (ex. : galets, fragments de fossiles, concrétions)."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32513>
+  a skos:Concept ;
+  skos:prefLabel "Powdering"@en, "Pulvérulence"@fr ;
+  skos:altLabel "Chalking"@en, "Farinage"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32512> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32513" ;
+  skos:definition "Term employed for describing granular disintegration of finely grained stones"@en, "Désagrégation en poudre d'un matériau à grains fins (ex. craie)."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32548>
+  a skos:Concept ;
+  skos:prefLabel "Rayure"@fr, "Scratch"@en ;
+  skos:altLabel "Éraflure"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32543> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32548" ;
+  skos:definition "Manually induced superficial and line-like loss of material due to the action of some pointed object. It can be accidental or intentional. Usually it appears as a more or less long groove. Tool marks can have the appearance of scratches, but should not be"@en, "Perte linéaire de matière, accidentelle ou intentionnelle, provoquée par l'action manuelle d'un objet pointu. Habituellement, les rayures apparaissent sous forme de sillons plus ou moins longs, isolés ou associés en séries. Les outils de taille peuvent laisser des traces ayant l'apparence de rayures, mais ces traces ne doivent pas être considérées comme des signes d'altération. La griffure (ex. de pigeon) est une forme de rayure."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32535>
+  a skos:Concept ;
+  skos:prefLabel "Subflorescence"@en, "Subflorescence"@fr ;
+  skos:altLabel "Cryptoflorescence"@en, "Cryptoflorescence"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/discoloration_and_deposit> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32535" ;
+  skos:definition "Poorly adhesive soluble salts, commonly white, located under the stone surface."@en, "Cristaux de sels habituellement blancs, peu adhérents, formés sous la surface de la pierre."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32525>
+  a skos:Concept ;
+  skos:prefLabel "Staining"@en, "Tache"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32485> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32525" ;
+  skos:definition "Kind of discolouration of limited extent and generally of unattractive appearance."@en, "Zone d'extension limitée présentant une altération chromatique et ayant une apparence déplaisante."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32546>
+  a skos:Concept ;
+  skos:prefLabel "Impact damage"@en, "Trace d'impact"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32543> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32546" ;
+  skos:definition "Mechanical damage due to the impact of a projectile (bullet, shrapnel) or of a hard tool."@en, "Dégât mécanique dû à l'impact d'un projectile (balle, éclat d'obus etc.) ou d'un outil dur."@fr .
+
+<https://frollo.notre-dame.science/opentheso/th21/32551>
+  a skos:Concept ;
+  skos:prefLabel "Gap"@en, "Trou"@fr ;
+  skos:broader <https://frollo.notre-dame.science/opentheso/th21/32550> ;
+  skos:inScheme <https://frollo.notre-dame.science/opentheso/th21> ;
+  dc:created "2020-10-13"^^xsd:date ;
+  dc:modified "2023-03-28"^^xsd:date ;
+  dc:identifier "32551" ;
+  skos:definition "Hollow place in the stone surface, hole."@en, "Espace vide, cavité."@fr .
