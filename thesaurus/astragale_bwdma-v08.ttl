@@ -1,0 +1,282 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+
+<http://astragale.cnrs.fr/th/bwdma>
+        a                               skos:ConceptScheme ;
+        # rdfs:label                      "Astragale Architecture and Components Thesaurus"@en, "Architecture et Composants Thesaurus (Astragale)"@fr ;
+        skos:prefLabel                  "Built Works Diagnosis and Maintenance Activities"@en, "Thésaurus des Activités de Diagnostic et de Maintenance des Ouvrages Bâtis"@fr ;
+        skos:notation                   "bwdma" ;
+        dct:description                 "The Built Works Diagnosis and Maintenance Activities (Astragale BWDMA) is a controlled vocabulary used for describing the diagnosis, pronostic and maintenance activities, performed on architectural and civil engineering works or components. It is used within the Astragale Project, and to be linked with future unique referential for building-related activities such as the 'Thesaurus des activités de conservation et de restauration'. Current version is still in curation."@en ;
+        dct:creator                     "Antoine Gros" ;
+        dct:publisher                   "Astragale" ;
+        dct:created                     "2022-03-06"^^xsd:dateTime ;
+        dct:modified                    "2024-09-02"^^xsd:dateTime ;
+        dct:language                    "fr", "en" ;
+        
+        skos:hasTopConcept              <http://astragale.cnrs.fr/th/bwdma/documentation>,
+                                        <http://astragale.cnrs.fr/th/bwdma/survey>,
+                                        <http://astragale.cnrs.fr/th/bwdma/modeling>,
+                                        <http://astragale.cnrs.fr/th/bwdma/simulation>, 
+                                        <http://astragale.cnrs.fr/th/bwdma/post_processing> ;
+        owl:versionInfo                 "0.8"^^[xsd:float] .
+
+
+# Documentation
+###############
+<http://astragale.cnrs.fr/th/bwdma/documentation>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Documentation"@en, "Documentation"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+#########
+<http://astragale.cnrs.fr/th/bwdma/simulation_hypothesis_note>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "..."@en, "Note d'hypothèses de simulation"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/documentation> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+<http://astragale.cnrs.fr/th/bwdma/report_survey>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Documentation from surveying activities"@en, "Rapport d'activités de relevé"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/documentation> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+<http://astragale.cnrs.fr/th/bwdma/report_modeling>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Documentation from modeling activities"@en, "Rapport d'activités de modélisation"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/documentation> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+
+# Surveys
+#########
+<http://astragale.cnrs.fr/th/bwdma/survey>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Survey"@en, "Relevé"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+#########
+
+# Surveys - Geometry
+####################
+<http://astragale.cnrs.fr/th/bwdma/geometric_survey>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Geometric survey"@en, "Relevé géométrique"@fr ;
+        skos:altLabel    "Relevé architectural"@en ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/survey> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+
+<http://astragale.cnrs.fr/th/bwdma/photogrammetry>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Photogrammetry"@en, "Photogrammétrie"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/geometric_survey> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+
+<http://astragale.cnrs.fr/th/bwdma/photogrammetry>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Photogrammetry"@en, "Photogrammétrie"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/geometric_survey> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+
+<http://astragale.cnrs.fr/th/bwdma/3d_scan>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "3d scan"@en, "Scan 3d"@fr ;
+        skos:altLabel    "Lasergrammetry"@en, "Lasergrammetrie"@en ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/geometric_survey> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+
+# Surveys - Cartography
+#######################
+<http://astragale.cnrs.fr/th/bwdma/cartography_materials>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel     "Materials survey"@en, "Relevé des matériaux"@fr ;
+        skos:altLabel      "Materials cartography"@en, "Cartographie des matériaux"@en ;
+        dct:description    "..."@en, "..."@fr ;
+        skos:broader       <http://astragale.cnrs.fr/th/bwdma/survey> ;
+        skos:inScheme      <http://astragale.cnrs.fr/th/bwdma> .
+
+<http://astragale.cnrs.fr/th/bwdma/cartography_disorders>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Structural disorders survey"@en, "Relevé des désordres structurels"@fr ;
+        skos:altLabel    "Structural disorders cartography"@en, "Cartographie des désordres structurels"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/survey> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+<http://astragale.cnrs.fr/th/bwdma/cartography_alterations>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Materials alterations survey"@en, "Relevé des altérations matériau"@fr ;
+        skos:altLabel    "Materials alterations cartography"@en, "Cartographie des altérations matériau"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/survey> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+
+# Modeling
+##########
+<http://astragale.cnrs.fr/th/bwdma/modeling>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Modeling"@en, "Modélisation"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+#########
+
+# Surveys - Geometry
+####################
+<http://astragale.cnrs.fr/th/bwdma/geometric_modeling>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Geometric modeling"@en, "Modélisation géométrique"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/modeling> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+<http://astragale.cnrs.fr/th/bwdma/photogrammetry>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "CAD Architectural modeling"@en, "Modélisation géométrique architecturale CAD"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/geometric_modeling> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+<http://astragale.cnrs.fr/th/bwdma/photogrammetry>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Structural modeling"@en, "Modélisation géométrique structurelle"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/geometric_modeling> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+
+# Simulations
+#############
+<http://astragale.cnrs.fr/th/bwdma/simulation>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Simulation"@en, "Simulation"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+#########
+<http://astragale.cnrs.fr/th/bwdma/mechanical_simulation>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Simulation and mechanical calculation"@en, "Calcul et simulation mécanique"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/simulation> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+<http://astragale.cnrs.fr/th/bwdma/mechanical_FEM>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Mechanical simulation with Finite Element Method (FEM)"@en, "Simulation mécanique avec la Méthode des Elements Finis (MEF)"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/mechanical_simulation> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+<http://astragale.cnrs.fr/th/bwdma/mechanical_DEM>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Mechanical simulation with Discrete Element Method (DEM)"@en, "Simulation mécanique avec la Méthode des Elements Discrets (MED)"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/mechanical_simulation> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+<http://astragale.cnrs.fr/th/bwdma/calcul_rupture>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "..."@en, "Calcul à la rupture"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/mechanical_simulation> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+<http://astragale.cnrs.fr/th/bwdma/analyse_limite>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "..."@en, "Analyse limite"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/mechanical_simulation> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+
+# Post-processing / Data Science / Data Processing
+##################################################
+<http://astragale.cnrs.fr/th/bwdma/post_processing>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Post-processing"@en, "Post-Traitement"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+#########
+<http://astragale.cnrs.fr/th/bwdma/geometric_finite_element_mesh_generation>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Finite element mesh generation"@en, "Génération d'un maillage élément fini"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/post_processing> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+
+<http://astragale.cnrs.fr/th/bwdma/extraction_simulation_disorders>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Extraction of structural disorders cartography from mecanical simulation"@en, "Extraction de la cartographie des désordres structurels depuis une simulation mécanique"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/post_processing> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+<http://astragale.cnrs.fr/th/bwdma/extraction_support_reactions>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Extraction of support reaction from mecanical simulation"@en, "Extraction des réactions aux appuis depuis une simulation mécanique"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/post_processing> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+<http://astragale.cnrs.fr/th/bwdma/extraction_geometric_displacement>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Extraction of large geometrical displacements cartographie from mecanical simulation"@en, "Extraction de la cartographie des déformations géométriques depuis une simulation mécanique"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/post_processing> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
+
+<http://astragale.cnrs.fr/th/bwdma/extraction_max_constraints>
+        a  skos:Concept ;
+        # rdfs:label       "Single Built Works"@en, "Bâtiments Simples"@fr ;
+        skos:prefLabel   "Extraction of max constraints cartography from mecanical simulation"@en, "Extraction de la cartographie des contraintes maximales depuis une simulation mécanique"@fr ;
+        dct:description  "..."@en, "..."@fr ;
+        skos:broader     <http://astragale.cnrs.fr/th/bwdma/post_processing> ;
+        skos:inScheme    <http://astragale.cnrs.fr/th/bwdma> .
